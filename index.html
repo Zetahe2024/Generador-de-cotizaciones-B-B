@@ -10,7 +10,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 #vista-form { display: block; }
 #vista-preview { display: none; }
 .app-header { background: linear-gradient(135deg, #1f3a5f, #2c5282); color: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 10; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
-.app-header img { height: 60px; filter: brightness(0) invert(1); }
+.app-header img { height: 60px; filter: brightness(0) invert(1); } /* Filtro para que el logo resalte en blanco si es necesario */
 .container { max-width: 600px; margin: 0 auto; padding: 16px; }
 .card { background: white; border-radius: 12px; padding: 18px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); }
 .card h2 { margin: 0 0 14px; font-size: 15px; color: #1f3a5f; font-weight: 600; display: flex; align-items: center; gap: 8px; }
@@ -36,39 +36,28 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .btn-main { width: 100%; padding: 16px; background: linear-gradient(135deg, #1f3a5f, #2c5282); color: white; border: none; border-radius: 12px; font-size: 16px; font-weight: 600; margin-top: 8px; box-shadow: 0 4px 12px rgba(31,58,95,0.3); }
 .btn-sec { width: 100%; padding: 12px; background: white; color: #1f3a5f; border: 1px solid #1f3a5f; border-radius: 10px; font-size: 14px; margin-top: 8px; }
 
-#vista-preview { background: white; min-height: 100vh; }
-.prev-header { background: linear-gradient(135deg, #1f3a5f, #2c5282); color: white; padding: 14px 16px; display: flex; align-items: center; gap: 10px; position: sticky; top: 0; z-index: 10; }
-.prev-back { background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 14px; border-radius: 8px; font-size: 14px; }
-.prev-title { flex: 1; font-size: 14px; font-weight: 600; }
-.dl-box { margin: 16px; background: #f0fdf4; border: 2px solid #86efac; border-radius: 12px; padding: 16px; text-align: center; }
-.dl-link { display: inline-block; background: #16a34a; color: white; padding: 13px 24px; border-radius: 10px; font-size: 15px; font-weight: 700; text-decoration: none; width: 100%; }
-
+/* Estilos de la Cotización Final */
 .cot-body { padding: 20px; max-width: 680px; margin: 0 auto; font-family: Arial, sans-serif; font-size: 13px; color: #222; }
-.cot-hdr { display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #1f3a5f; padding-bottom: 14px; margin-bottom: 10px; }
-.cot-brand-img { height: 80px; width: auto; }
+.cot-hdr { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #1f3a5f; padding-bottom: 14px; margin-bottom: 10px; }
+.cot-brand-img { height: 70px; width: auto; }
 .cot-right { text-align: right; }
 .cot-fecha { font-size: 11px; color: #666; }
 .cot-folio { font-size: 26px; font-weight: bold; color: #1f3a5f; margin-top: 2px; }
-.cot-vig { text-align: center; font-size: 11px; color: #888; font-style: italic; margin: 8px 0 14px; }
-.cot-tit { font-size: 30px; font-weight: bold; color: #111; margin: 0 0 2px; line-height: 1.1; }
-.cot-sub { font-size: 12px; color: #555; margin: 0 0 18px; }
-.cot-svc { margin-bottom: 12px; }
-.cot-svc ul { margin: 4px 0 0 20px; padding: 0; }
+.cot-tit { font-size: 24px; font-weight: bold; color: #111; margin: 15px 0 5px; text-transform: uppercase; }
+.cot-sub { font-size: 14px; color: #444; margin-bottom: 20px; font-weight: 600; }
+.cot-svc { margin-bottom: 10px; padding: 8px; border-bottom: 1px solid #eee; }
 .cot-hr { border: none; border-top: 1px solid #bbb; margin: 18px 0; }
-.cot-bot { display: flex; gap: 20px; flex-wrap: wrap; }
-.cot-cond { flex: 1; font-size: 11px; line-height: 1.6; min-width: 180px; }
-.cot-cond h4 { margin: 0 0 3px; font-size: 11px; font-weight: 700; }
-.cot-tots { min-width: 200px; text-align: right; }
-.cot-tots table { width: 100%; border-collapse: collapse; }
-.cot-tots td { padding: 3px 0; font-size: 13px; }
-.cot-tots .tf td { font-weight: bold; font-size: 15px; border-top: 1px solid #bbb; padding-top: 6px; }
+.cot-bot { display: flex; justify-content: space-between; gap: 20px; }
+.cot-cond { flex: 1; font-size: 11px; color: #555; }
+.cot-tots { min-width: 180px; text-align: right; }
+.tf { font-weight: bold; font-size: 16px; border-top: 2px solid #1f3a5f; margin-top: 5px; }
 </style>
 </head>
 <body>
 
 <div id="vista-form">
   <div class="app-header">
-    <img src="logo.png.jpg" alt="Logo B&B">
+    <img src="logo.png.jpg" alt="B&B Servicios Industriales">
   </div>
   <div class="container">
     <div class="folio-box">
@@ -86,7 +75,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
     <div class="card">
       <h2><span class="num">1</span> Datos del Cliente</h2>
       <div class="field"><label>Cliente</label><input type="text" id="cliente" placeholder="Nombre de la empresa"></div>
-      <div class="field"><label>Concepto General</label><input type="text" id="concepto" placeholder="Ej: Mantenimiento Preventivo"></div>
+      <div class="field"><label>Concepto General</label><input type="text" id="concepto" placeholder="Ej: Mantenimiento Mecánico"></div>
       <div class="field"><label>Fecha</label><input type="date" id="fecha"></div>
     </div>
 
@@ -107,14 +96,14 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 </div>
 
 <div id="vista-preview">
-  <div class="prev-header">
-    <button class="prev-back" onclick="volver()">← Regresar</button>
-    <span class="prev-title">Vista Previa</span>
+  <div class="app-header" style="background: #2d3748;">
+    <button onclick="volver()" style="background:none; border:1px solid white; color:white; border-radius:5px; padding:5px 10px; float:left;">← Volver</button>
+    <span style="color:white; font-weight:bold;">Vista Previa</span>
   </div>
-  <div class="dl-box">
-    <a id="dl-link" class="dl-link" download="cotizacion.html">⬇️ Descargar Cotización</a>
+  <div id="cot-contenido" class="cot-body"></div>
+  <div class="container">
+    <button class="btn-main" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button>
   </div>
-  <div class="cot-body" id="cot-contenido"></div>
 </div>
 
 <script>
@@ -129,7 +118,7 @@ function cambiarFolio(d) {
   el.value = Math.max(1, (parseInt(el.value)||0) + d);
 }
 
-function agregarSvc() { svcs.push({desc:'',det:'',precio:0}); renderSvcs(); }
+function agregarSvc() { svcs.push({desc:'', precio:0}); renderSvcs(); }
 function eliminarSvc(i) { if(svcs.length<=1)return; svcs.splice(i,1); renderSvcs(); }
 
 function renderSvcs() {
@@ -142,7 +131,7 @@ function renderSvcs() {
       <button class="svc-del" onclick="eliminarSvc(${i})">&times;</button>
       <div class="field" style="margin-top:10px"><label>Descripción</label>
         <input type="text" value="${s.desc}" oninput="svcs[${i}].desc=this.value"></div>
-      <div class="field"><label>Precio Unitario</label>
+      <div class="field"><label>Precio Unitario (MXN)</label>
         <input type="number" value="${s.precio||''}" oninput="svcs[${i}].precio=parseFloat(this.value)||0;actualizarTotales()"></div>`;
     c.appendChild(d);
   });
@@ -161,47 +150,52 @@ function fmt(n){ return '$'+n.toLocaleString('es-MX',{minimumFractionDigits:2});
 function volver() { document.getElementById('vista-preview').style.display='none'; document.getElementById('vista-form').style.display='block'; }
 
 function generar(){
-  const cliente=document.getElementById('cliente').value.trim();
-  const concepto=document.getElementById('concepto').value.trim();
-  const folio=String(document.getElementById('folio').value).padStart(3,'0');
+  const cliente = document.getElementById('cliente').value.toUpperCase();
+  const concepto = document.getElementById('concepto').value;
+  const folio = String(document.getElementById('folio').value).padStart(3,'0');
+  const fecha = document.getElementById('fecha').value;
   
-  let sHTML='';
-  svcs.forEach((s,i)=>{
-    if(!s.desc)return;
-    sHTML+=`<div class="cot-svc"><b>${i+1}. ${s.desc}</b> — ${fmt(s.precio)}</div>`;
+  let sHTML = '';
+  svcs.forEach((s,i) => {
+    if(!s.desc) return;
+    sHTML += `<div class="cot-svc"><b>${i+1}. ${s.desc}</b><br><span style="float:right;">${fmt(s.precio)}</span><br></div>`;
   });
 
-  const cotHTML=`
+  const sub = svcs.reduce((a,s)=>a+(s.precio||0),0);
+  const iva = sub*0.16;
+  const tot = sub+iva;
+
+  const content = `
     <div class="cot-hdr">
       <img src="logo.png.jpg" class="cot-brand-img">
       <div class="cot-right">
-        <div class="cot-fecha">Fecha: ${document.getElementById('fecha').value}</div>
-        <div class="cot-folio">COT- ${folio}</div>
+        <div class="cot-fecha">Fecha: ${fecha}</div>
+        <div class="cot-folio">COT-${folio}</div>
+        <div style="font-size:10px; color:#666;">RFC: GAML950426CA8</div>
       </div>
     </div>
-    <p class="cot-tit">${cliente.toUpperCase()}</p>
-    <p class="cot-sub">${concepto}</p>
+    <div class="cot-tit">${cliente}</div>
+    <div class="cot-sub">${concepto}</div>
     ${sHTML}
-    <hr class="cot-hr">
+    <div class="cot-hr"></div>
     <div class="cot-bot">
       <div class="cot-cond">
-        <h4>Condiciones</h4>
-        <p>Vigencia: 30 días naturales<br>RFC: GAML950426CA8</p>
+        <b>Condiciones:</b><br>
+        • Vigencia: 30 días naturales.<br>
+        • Tiempo de ejecución: 1-2 días hábiles.<br>
+        • Precios sujetos a cambios sin previo aviso.
       </div>
       <div class="cot-tots">
-        <table>
-          <tr><td>SUBTOTAL</td><td>${document.getElementById('r-sub').textContent}</td></tr>
-          <tr class="tf"><td>TOTAL</td><td>${document.getElementById('r-tot').textContent}</td></tr>
-        </table>
+        Subtotal: ${fmt(sub)}<br>
+        IVA (16%): ${fmt(iva)}<br>
+        <div class="tf">TOTAL: ${fmt(tot)}</div>
       </div>
-    </div>`;
+    </div>
+  `;
 
-  document.getElementById('cot-contenido').innerHTML = cotHTML;
+  document.getElementById('cot-contenido').innerHTML = content;
   document.getElementById('vista-form').style.display = 'none';
   document.getElementById('vista-preview').style.display = 'block';
-
-  const blob = new Blob([`<html><body style="padding:40px">${cotHTML}</body></html>`], {type:'text/html'});
-  document.getElementById('dl-link').href = URL.createObjectURL(blob);
 }
 </script>
 </body>
